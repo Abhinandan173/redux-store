@@ -9,17 +9,33 @@ const RenderData = () => {
         console.log('getdata---', getData);
     })
     return(
-        <div>
-            <h1>renderData Component</h1>
+        <div className="render-container">
+            <div className="render-center-div">
+            <h1 className="render-headaer">renderData Component</h1>
             {getData?.map((item,index)=>{
                 return(
                     <div 
+                        key={index}
                         onClick={()=>dispatch(DeleteData(index)) }
-                        style={{height:'30px', width:'60%', backgroundColor:'red', margin:10}}>
-                        {/* // */}
+                        className="render-data">
+                            <h4 className="render-name">
+                                <span>Name : </span>
+                                {item.fname}  {item.lname}
+                            </h4>
+                            <div className="age-village">
+                                <div>
+                                    <span>Age : </span>
+                                    {item.age}
+                                </div>
+                                <div>
+                                    <span>Village : </span>
+                                    {item.village}
+                                </div>
+                            </div>
                     </div>
                 )
             })}
+            </div>
         </div>
     )
 }

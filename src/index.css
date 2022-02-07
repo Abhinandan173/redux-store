@@ -138,3 +138,49 @@ code {
   font-weight: bold;
   letter-spacing: 1px;
 }
+.render-container{
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
+.render-headaer{
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 10px;
+}
+/* .render-center-div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  transform: translate(-50%, -60%);
+  overflow: scroll;
+} */
+.render-data{
+  /* style={{height:'40px', width:'60%', backgroundColor:'red', margin:10}} */
+  height: 70px;
+  width: 60%;
+  margin-left: 20%;
+  background-color: #5de6de;
+  background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+  margin-top: 5px;
+  display: flex;
+  padding-left: 1%;
+  padding-top: 5px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.render-name{
+  text-transform: capitalize;
+  word-spacing: 2%;
+}
+.age-village{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline-end: 10px;
+  padding-top: 5px;
+  box-sizing: border-box;
+
+}
