@@ -12,6 +12,13 @@ const AddData = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     
+
+    const clearInputFeilds = () => {
+        setFname('')
+        setLname('')
+        setAge('')
+        setVillage('')
+    }
     const save = () => {
         console.log('----', fname, lname, age, village);
         let obj = {
@@ -21,6 +28,7 @@ const AddData = () => {
             village:village
         }
         dispatch(addDataInRedux(obj))
+        clearInputFeilds()
     }
 
     const nextpage = () => {

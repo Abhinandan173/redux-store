@@ -14,7 +14,8 @@ const LoginPage = () => {
             <div className="center-div">
                 <img 
                 className="profile-pic"
-                src='https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png' />
+                src='https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png' 
+                />
                 <h2 className="header-text">user login</h2>
                 <div>
                     <div>
