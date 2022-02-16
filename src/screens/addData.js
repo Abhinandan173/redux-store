@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addDataInRedux } from "../action";
+import { addDataInRedux } from "../Redux/action/index";
 
 const AddData = () => {
 

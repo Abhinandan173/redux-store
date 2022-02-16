@@ -1,18 +1,31 @@
 import React from "react";
-import { ButtonBase, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Button, ButtonBase, Container, Grid, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const MaterialUi = () => {
 
     const classes = useStyles();
+    const navigate = useNavigate()
 
     return(
         <Paper className={classes.paper}>
-
         <Grid item container spacing={2}>
           <Grid item xs={4} sm={4} md={4} lg={4} xl={4}  container>
             <Grid className={classes.image}>
+            <motion.div
+              transition={{ delay: 0.3, duration: 3 }}
+              variants={{
+                show: { opacity: 1, x: "0" },
+                hidden: { opacity: 0, x: "70%" },
+              }}
+              initial="hidden"
+              animate="show"
+            >
               <img className={classes.img} alt="complex" 
               src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png" />
+            </motion.div>
             </Grid>
           </Grid>
 
@@ -43,6 +56,8 @@ const MaterialUi = () => {
           </Grid>
 
         </Grid>
+        
+        <Button onClick={()=> navigate('/AnimationScreen')}>Next Page</Button>
 
       </Paper>
     )
@@ -60,8 +75,8 @@ const useStyles = makeStyles((theme)=>({
         maxWidth: 500,
       },
       image: {
-        width: 128,
-        height: 128,
+        width: 100,
+        height: 100,
       },
       img: {
         margin: 'auto',
