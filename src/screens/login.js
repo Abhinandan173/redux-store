@@ -40,7 +40,7 @@ const LoginPage = () => {
                     animate="show"
                 >
                     <div>
-                        <input className="input-feild" placeholder="User name"/>
+                        <input className="input-feild" placeholder="User name" required/>
                     </div>
                     </motion.div>
                     <motion.div

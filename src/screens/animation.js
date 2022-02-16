@@ -1,6 +1,7 @@
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import React from "react";
+import { motion } from "framer-motion";
 
 const AnimationScreen = () => {
     const classes = useStyles()
@@ -9,6 +10,16 @@ const AnimationScreen = () => {
       <Grid item item xs={12} sm={12} md={6} lg={4} xl={4}  container>
       <Card >
       <CardActionArea>
+        
+      <motion.div
+        transition={{ delay: 0.3, duration: 1 }}
+        variants={{
+            show: { opacity: 1, x: "0" },
+            hidden: { opacity: 0, x: "70%" },
+        }}
+        initial="hidden"
+        animate="show"
+        > 
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
@@ -16,6 +27,7 @@ const AnimationScreen = () => {
           image="https://v4.mui.com/static/images/cards/contemplative-reptile.jpg"
           title="Contemplative Reptile"
         />
+        </motion.div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             Lizard
@@ -39,7 +51,16 @@ const AnimationScreen = () => {
 
 <Grid item xs={12} sm={12} md={6} lg={4} xl={4}  container >
     <Card >
-      <CardActionArea>
+      <CardActionArea>  
+      <motion.div
+        transition={{ delay: 0.3, duration: 1 }}
+        variants={{
+            show: { opacity: 1, x: "0" },
+            hidden: { opacity: 0, x: "70%" },
+        }}
+        initial="hidden"
+        animate="show"
+        > 
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
@@ -47,6 +68,7 @@ const AnimationScreen = () => {
           image="https://v4.mui.com/static/images/cards/contemplative-reptile.jpg"
           title="Contemplative Reptile"
         />
+        </motion.div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             Lizard
@@ -71,7 +93,16 @@ const AnimationScreen = () => {
 
     <Grid item xs={12} sm={12} md={6} lg={4} xl={4}  container >
     <Card >
-      <CardActionArea>
+      <CardActionArea>  
+      <motion.div
+        transition={{ delay: 0.3, duration: 1 }}
+        variants={{
+            show: { opacity: 1, x: "0" },
+            hidden: { opacity: 0, x: "70%" },
+        }}
+        initial="hidden"
+        animate="show"
+        > 
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
@@ -79,6 +110,7 @@ const AnimationScreen = () => {
           image="https://v4.mui.com/static/images/cards/contemplative-reptile.jpg"
           title="Contemplative Reptile"
         />
+        </motion.div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             Lizard
